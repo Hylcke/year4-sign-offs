@@ -1,0 +1,1627 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Year 4 Sign Offs</title>
+<meta name="description" content="Mandatory procedure and block sign off tracker for Year 4 MBChB.">
+<meta name="theme-color" content="#f3f4f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sign Offs">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>
+/* Layout: one column of tinted cards. Each block owns a colour; green always means signed off. */
+:root {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --track: #e6e8ec;
+  --seg-on: #ffffff;
+  --fg: #101318;
+  --fg-2: #474e59;
+  --fg-3: #5c6573;
+  --line: #e2e5ea;
+  --line-strong: #c4c9d1;
+
+  --s-amc: #4338ca; --s-mh: #854d0e; --s-scc: #0369a1; --s-gp: #be185d; --s-ltc: #0e7490; --s-rch: #9a3412; --s-spd: #6d28d9;
+  --s-amc-solid: #4338ca; --s-mh-solid: #a16207; --s-scc-solid: #0369a1; --s-gp-solid: #be185d; --s-ltc-solid: #0e7490; --s-rch-solid: #c2410c; --s-spd-solid: #6d28d9;
+  --pri: #4338ca; --req: #0369a1;
+  --on-solid: #ffffff;
+
+  --ok: #166534;
+  --ok-bg: #dcfce7;
+  --ok-line: #86efac;
+  --ok-solid: #16a34a;
+  --ok-solid-fg: #ffffff;
+  --ok-card: #f0fdf4;
+  --danger: #b42318;
+  --accent: #4338ca;
+  --accent-fg: #ffffff;
+  --inverse: #15181d;
+  --inverse-fg: #f5f6f8;
+  --inverse-accent: #a5b4fc;
+  --scrim: rgba(16, 19, 24, 0.32);
+  --shadow: 0 16px 48px rgba(16, 19, 24, 0.07), 0 1px 3px rgba(16, 19, 24, 0.06);
+  --seg-shadow: 0 1px 2px rgba(16, 19, 24, 0.07);
+
+  --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --text-meta: 0.75rem;
+  --text-2: 0.875rem;
+  --text-body: 1rem;
+  --text-h3: 1.0625rem;
+  --text-h2: 1.25rem;
+  --text-h1: 1.75rem;
+  --w-medium: 500;
+  --w-semi: 600;
+
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s6: 24px; --s8: 32px; --s12: 48px;
+  --r-sm: 8px; --r-md: 12px; --r-lg: 18px;
+  --hit: 44px;
+  --page: 720px;
+  --dur: 180ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --c: var(--accent);
+  --cs: var(--accent);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c0e12; --surface: #161a20; --track: #1d2128; --seg-on: #333a45;
+    --fg: #eef0f4; --fg-2: #b6bcc6; --fg-3: #8d95a2; --line: #272c35; --line-strong: #414957;
+    --s-amc: #a5b4fc; --s-mh: #fde047; --s-scc: #7dd3fc; --s-gp: #f9a8d4; --s-ltc: #67e8f9; --s-rch: #fdba74; --s-spd: #c4b5fd;
+    --pri: #a5b4fc; --req: #7dd3fc;
+    --ok: #86efac; --ok-bg: #14301f; --ok-line: #2b6a43; --ok-solid: #22a05a; --ok-solid-fg: #04130a; --ok-card: #102117;
+    --danger: #ff8a7a; --accent: #a5b4fc; --accent-fg: #0c0e12;
+    --inverse: #eef0f4; --inverse-fg: #101318; --inverse-accent: #4338ca;
+    --scrim: rgba(0, 0, 0, 0.55);
+    --shadow: 0 16px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    --seg-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c0e12; --surface: #161a20; --track: #1d2128; --seg-on: #333a45;
+  --fg: #eef0f4; --fg-2: #b6bcc6; --fg-3: #8d95a2; --line: #272c35; --line-strong: #414957;
+  --s-amc: #a5b4fc; --s-mh: #fde047; --s-scc: #7dd3fc; --s-gp: #f9a8d4; --s-ltc: #67e8f9; --s-rch: #fdba74; --s-spd: #c4b5fd;
+  --pri: #a5b4fc; --req: #7dd3fc;
+  --ok: #86efac; --ok-bg: #14301f; --ok-line: #2b6a43; --ok-solid: #22a05a; --ok-solid-fg: #04130a; --ok-card: #102117;
+  --danger: #ff8a7a; --accent: #a5b4fc; --accent-fg: #0c0e12;
+  --inverse: #eef0f4; --inverse-fg: #101318; --inverse-accent: #4338ca;
+  --scrim: rgba(0, 0, 0, 0.55);
+  --shadow: 0 16px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --seg-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font); font-size: var(--text-body); line-height: 1.45;
+  -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
+}
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button, input, label, textarea { touch-action: manipulation; }
+h1, h2, h3 { font-weight: var(--w-semi); line-height: 1.15; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { padding-inline: var(--s4); }
+.page { width: 100%; max-width: var(--page); margin-inline: auto; }
+
+/* Navigation: bottom tab bar on phones, top bar on wider screens */
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  background: var(--surface); box-shadow: 0 -1px 0 var(--line);
+  padding: 0 var(--s2) env(safe-area-inset-bottom, 0px);
+}
+.tabbar-in { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: var(--page); margin: 0 auto; }
+.tab {
+  min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  border: 0; background: none; color: var(--fg-3); font-size: var(--text-meta); font-weight: var(--w-medium);
+}
+.tab svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.tab[aria-current="page"] { color: var(--accent); }
+.tab[aria-current="page"] svg { stroke-width: 2.1; }
+@media (hover: hover) { .tab:hover { color: var(--fg); } }
+@media (min-width: 768px) {
+  .tabbar { position: sticky; top: 0; bottom: auto; box-shadow: 0 1px 0 var(--line); padding: 0 var(--s4); }
+  .tab { flex-direction: row; gap: var(--s2); font-size: var(--text-2); min-height: 56px; }
+  .tab svg { width: 20px; height: 20px; }
+}
+
+main { padding-block: var(--s6) calc(var(--s12) + 56px + env(safe-area-inset-bottom, 0px)); }
+@media (min-width: 768px) { main { padding-bottom: var(--s12); } }
+.page-title { font-size: var(--text-h1); letter-spacing: -0.02em; margin: 0 var(--s1) var(--s6); }
+.page-title:focus { outline: none; }
+.link { min-height: var(--hit); padding: 0 var(--s1); border: 0; background: none; color: var(--accent); font-size: var(--text-2); font-weight: var(--w-medium); }
+.more-link { margin-top: var(--s2); }
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 2px; padding: 2px; border-radius: var(--r-md); background: var(--track); }
+.filter { margin-bottom: var(--s6); }
+.filter button { min-height: var(--hit); border: 0; border-radius: 10px; background: none; font-size: var(--text-2); font-weight: var(--w-medium); color: var(--fg-2); }
+.filter button[aria-pressed="true"] { background: var(--seg-on); color: var(--fg); box-shadow: var(--seg-shadow); }
+.sticky { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 4; background: var(--bg); padding-top: var(--s2); margin-top: calc(var(--s2) * -1); padding-bottom: var(--s2); }
+@media (min-width: 768px) { .sticky { top: 56px; } }
+.sticky .sec-head { margin-bottom: var(--s1); }
+.sticky .labels-strip { margin-bottom: 0; }
+.empty { padding: var(--s4); border-radius: var(--r-lg); border: 1px dashed var(--line-strong); color: var(--fg-2); font-size: var(--text-2); }
+.reminder { margin-top: var(--s8); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s3); padding: var(--s4); border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); }
+.reminder p { font-size: var(--text-2); color: var(--fg-2); }
+.reminder[hidden] { display: none; }
+.panel[hidden] { display: none; }
+.section + .section { margin-top: var(--s8); }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s4); margin: 0 var(--s1) var(--s3); }
+.sec-head h2 { font-size: var(--text-h2); color: var(--c); }
+.sec-head h3, .sec-head h2.h3 { font-size: var(--text-h3); color: var(--fg); }
+.count { color: var(--fg-3); font-size: var(--text-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Cards */
+.cards { display: grid; gap: var(--s3); }
+.card {
+  position: relative;
+  background: var(--surface);
+  background: color-mix(in srgb, var(--c) 6%, var(--surface));
+  border: 1px solid var(--line);
+  border-color: color-mix(in srgb, var(--c) 18%, var(--surface));
+  border-radius: var(--r-lg);
+  padding: var(--s4);
+  scroll-margin-top: 96px;
+}
+.card.complete { background: var(--ok-card); border-color: var(--ok-line); }
+.card-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: var(--s3); }
+.card-title { font-weight: var(--w-medium); min-width: 0; }
+.card-count { font-size: var(--text-2); font-weight: var(--w-semi); color: var(--c); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.card.complete .card-count { color: var(--ok); }
+.card .boxes { margin-top: var(--s3); }
+
+.toggle {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: var(--s3);
+  width: calc(100% + 2 * var(--s2)); min-height: var(--hit); margin: calc(var(--s3) * -1) calc(var(--s2) * -1);
+  padding: 0 var(--s2); border: 0; background: none; text-align: left; border-radius: var(--r-md);
+}
+.card.complete:not(.open) .boxes { display: none; }
+.chev { width: 7px; height: 7px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); margin: -4px 2px 0; color: var(--fg-3); }
+.card.open .toggle .chev { transform: rotate(-135deg); margin-top: 4px; }
+
+/* Boxes */
+.proc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) var(--s2) minmax(0, 1.25fr); column-gap: 6px; }
+.slot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 6px; }
+.box {
+  position: relative; min-height: 52px; padding: var(--s1) 2px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--surface); border: 1.5px solid var(--line-strong);
+  border-color: color-mix(in srgb, var(--c) 30%, var(--surface));
+  border-radius: var(--r-sm); line-height: 1.15; font-variant-numeric: tabular-nums;
+}
+.slot-grid .box { min-height: 44px; }
+.box.comp { grid-column: 6; border-width: 2px; border-color: var(--c); }
+@media (hover: hover) { .box:hover { border-color: var(--c); } }
+.box .d { font-size: var(--text-2); font-weight: var(--w-medium); white-space: nowrap; }
+.slot-grid .box .d { font-size: var(--text-meta); }
+.box .y { font-size: var(--text-meta); }
+.box.on { background: var(--ok-bg); border-color: var(--ok-line); color: var(--ok); }
+.box.comp.on { background: var(--ok-solid); border-color: var(--ok-solid); color: var(--ok-solid-fg); }
+.box::after { content: ''; position: absolute; inset: -4px; border: 2px solid var(--c); border-radius: 11px; opacity: 0; pointer-events: none; }
+.box.flash::after { animation: flash 1200ms var(--ease); }
+@keyframes flash { 0% { opacity: 0; } 20% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+.labels-strip { padding: 0 17px; margin-bottom: calc(var(--s3) * -1 + 6px); }
+.labels-strip > span { display: none; }
+.box-labels { font-size: var(--text-meta); color: var(--fg-3); }
+.box-labels .comp-l { grid-column: 6; color: var(--c); font-weight: var(--w-semi); }
+.box-labels .att-l { grid-column: 1 / span 4; }
+
+@media (min-width: 768px) {
+  .card.proc { display: grid; grid-template-columns: minmax(0, 1fr) 380px; align-items: center; column-gap: var(--s6); }
+  .card.proc { grid-template-areas: "head labels" "head boxes"; }
+  .card.proc > .card-head, .card.proc > .toggle { grid-area: head; }
+  .card.proc > .card-labels { grid-area: labels; margin-top: 0; margin-bottom: var(--s1); }
+  .card.proc > .boxes { grid-area: boxes; }
+  .card.proc .boxes { margin-top: 0; }
+  .card.proc.complete:not(.open) .boxes { display: grid; }
+  .card.proc .toggle { display: contents; }
+  .card.proc .toggle .chev { display: none; }
+  .labels-strip { display: grid; grid-template-columns: minmax(0, 1fr) 380px; column-gap: var(--s6); }
+  .labels-strip > span { display: block; }
+}
+
+/* Chase next */
+.chase-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+.chase ol { list-style: none; margin: 0; padding: 0; }
+.chase li + li .chase-btn { box-shadow: inset 0 1px 0 var(--line); }
+.chase-btn {
+  display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: center; gap: var(--s3);
+  width: 100%; min-height: 56px; padding: var(--s2) var(--s4); text-align: left; background: none; border: 0;
+}
+@media (hover: hover) { .chase-btn:hover { background: color-mix(in srgb, var(--c) 6%, var(--surface)); } }
+.rank {
+  width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+  font-size: var(--text-meta); font-weight: var(--w-semi); font-variant-numeric: tabular-nums;
+  background: var(--track); background: color-mix(in srgb, var(--c) 14%, var(--surface)); color: var(--c);
+}
+.chase-name { min-width: 0; }
+.chase-last { display: block; font-size: var(--text-2); color: var(--fg-3); }
+.more { min-height: var(--hit); padding: 0 var(--s1); margin-top: var(--s1); background: none; border: 0; color: var(--accent); font-size: var(--text-2); font-weight: var(--w-medium); }
+
+/* Blocks */
+.chips {
+  display: flex; gap: var(--s2); overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none;
+  margin: 0 calc(var(--s4) * -1) var(--s4); padding: 2px var(--s4) var(--s1);
+}
+.chips::-webkit-scrollbar { display: none; }
+.chips button {
+  position: relative; flex: none; scroll-snap-align: start; min-height: var(--hit); padding: 0 var(--s4) 0 var(--s3);
+  display: inline-flex; align-items: center; gap: var(--s2); border-radius: 999px; border: 0;
+  font-size: var(--text-2); font-weight: var(--w-medium); color: var(--c); white-space: nowrap;
+  background: var(--surface); background: color-mix(in srgb, var(--c) 12%, var(--surface));
+}
+.chips .num {
+  width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; font-weight: var(--w-semi); font-variant-numeric: tabular-nums;
+  background: var(--surface); color: var(--c);
+}
+.chips button[aria-pressed="true"] { background: var(--cs); color: var(--on-solid); }
+.chips button[aria-pressed="true"] .num { background: var(--on-solid); color: var(--cs); }
+.chips .state { font-size: var(--text-meta); font-weight: var(--w-semi); }
+@media (hover: hover) { .chips button:not([aria-pressed="true"]):hover { background: color-mix(in srgb, var(--c) 20%, var(--surface)); } }
+
+.hero { background: var(--cs); color: var(--on-solid); border-radius: var(--r-lg); padding: var(--s6) var(--s4) var(--s4); margin-bottom: var(--s8); }
+.hero-n { font-size: var(--text-2); font-weight: var(--w-semi); }
+.hero h1 { font-size: var(--text-h1); letter-spacing: -0.02em; margin: var(--s1) 0 var(--s4); }
+.hero-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s1) var(--s4); font-size: var(--text-2); font-variant-numeric: tabular-nums; }
+.hero-left { font-weight: var(--w-semi); font-size: var(--text-body); }
+
+.cat + .cat { margin-top: var(--s8); }
+.card-note { margin-top: 2px; font-size: var(--text-2); color: var(--fg-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.note-btn {
+  min-height: var(--hit); padding: 0 var(--s2); margin: calc(var(--s3) * -1) calc(var(--s2) * -1) 0 0;
+  border: 0; border-radius: var(--r-md); background: none; color: var(--c); font-size: var(--text-2); font-weight: var(--w-medium); white-space: nowrap;
+}
+@media (hover: hover) { .note-btn:hover { background: color-mix(in srgb, var(--c) 10%, var(--surface)); } }
+.item-head { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: start; gap: var(--s3); }
+.item-head .card-count { padding-top: 2px; }
+.card.single .item-head { grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; }
+.card.single .note-btn { margin: calc(var(--s2) * -1) 0; }
+.card-labels { margin-top: var(--s3); font-size: var(--text-meta); color: var(--fg-3); }
+.card-labels + .boxes { margin-top: var(--s1); }
+.card-kind { display: block; font-size: var(--text-meta); color: var(--c); font-weight: var(--w-semi); margin-bottom: 2px; }
+.single-box { width: 52px; }
+.single-box .box { width: 100%; min-height: 44px; }
+.single-box .box .d { font-size: var(--text-meta); }
+
+/* Buttons */
+.btn { min-height: var(--hit); padding: 0 var(--s4); border-radius: var(--r-md); border: 0; background: var(--track); font-weight: var(--w-medium); font-size: var(--text-2); }
+@media (hover: hover) { .btn:hover { background: var(--line-strong); } }
+.btn.primary { background: var(--accent); color: var(--accent-fg); }
+.btn.quiet { background: none; color: var(--danger); padding-inline: var(--s2); }
+.btn.danger { background: var(--danger); color: var(--on-solid); }
+.more-form { gap: var(--s6) !important; }
+.more-group { display: grid; gap: var(--s3); }
+.more-group h3 { font-size: var(--text-body); }
+.more-text, .status { font-size: var(--text-2); color: var(--fg-2); }
+.status.warn { color: var(--danger); }
+.more-actions { display: flex; gap: var(--s2); }
+.more-row { display: flex; align-items: center; justify-content: space-between; gap: var(--s3); }
+.more-row .more-text { font-size: var(--text-body); color: var(--fg); font-weight: var(--w-medium); }
+
+/* Section setup */
+body.first-run .tabbar { display: none; }
+body.first-run main { padding-bottom: var(--s12); }
+.sections { border: 0; margin: 0; padding: 0; min-width: 0; }
+.section-opt { --c: var(--accent); display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: var(--s3); align-items: start; cursor: pointer; background: var(--surface); border-color: var(--line); }
+.section-opt input {
+  appearance: none; -webkit-appearance: none; margin: 2px 0 0; width: 22px; height: 22px; border-radius: 50%;
+  border: 1.5px solid var(--line-strong); background: var(--surface); display: grid; place-items: center;
+}
+.section-opt input::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-fg); transform: scale(0); }
+.section-opt input:checked { background: var(--accent); border-color: var(--accent); }
+.section-opt input:checked::after { transform: scale(1); }
+.section-opt:has(input:checked) { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.section-opt input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.section-text { display: grid; gap: 2px; min-width: 0; }
+.section-sum { font-size: var(--text-2); color: var(--fg-2); }
+.strip { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; margin-top: var(--s2); }
+.strip i { height: 8px; border-radius: 4px; background: var(--c); }
+.setup-err { margin-top: var(--s3); font-size: var(--text-2); color: var(--danger); }
+.setup-actions { display: flex; justify-content: flex-end; gap: var(--s2); margin-top: var(--s6); }
+.setup-actions [hidden] { display: none; }
+
+/* Dialog */
+dialog {
+  width: min(420px, calc(100vw - 2 * var(--s4))); max-height: calc(100dvh - 2 * var(--s4));
+  margin: auto; padding: 0; background: var(--surface); color: var(--fg);
+  border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow);
+  overflow: auto; overscroll-behavior: contain;
+}
+dialog::backdrop { background: var(--scrim); }
+dialog[open] { animation: rise var(--dur) var(--ease); }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+dialog form { padding: var(--s6); display: grid; gap: var(--s4); }
+dialog h2 { font-size: var(--text-h2); }
+.dlg-sub { margin-top: var(--s1); color: var(--c); font-size: var(--text-2); font-weight: var(--w-medium); }
+.field { display: grid; gap: 6px; }
+.field label { font-size: var(--text-2); font-weight: var(--w-medium); color: var(--fg-2); }
+.field .hint { font-size: var(--text-meta); color: var(--fg-3); }
+.field .err { font-size: var(--text-2); color: var(--danger); }
+.input { width: 100%; min-height: var(--hit); padding: var(--s2) var(--s3); background: var(--bg); border: 1.5px solid var(--line); border-radius: var(--r-sm); font-variant-numeric: tabular-nums; }
+.input:focus { border-color: var(--accent); outline: none; }
+.input[aria-invalid="true"] { border-color: var(--danger); }
+textarea.input { min-height: 96px; resize: vertical; line-height: 1.45; }
+input[type="date"].input { display: block; -webkit-appearance: none; appearance: none; text-align: left; }
+input[type="date"]::-webkit-date-and-time-value { text-align: left; }
+.quick { display: flex; gap: var(--s2); }
+.quick .btn { position: relative; min-height: 36px; padding: 0 var(--s3); }
+.quick .btn::before { content: ''; position: absolute; inset: -4px 0; }
+.dlg-actions { display: flex; align-items: center; gap: var(--s2); margin-top: var(--s2); }
+.dlg-actions .spacer { flex: 1; }
+@media (max-width: 767.98px) {
+  dialog { margin: auto auto var(--s4); }
+  dialog[open] { margin-bottom: max(var(--s4), env(safe-area-inset-bottom, 0px)); }
+}
+
+/* Undo toast */
+.toast {
+  position: fixed; left: 50%; bottom: calc(56px + var(--s3) + env(safe-area-inset-bottom, 0px)); z-index: 20;
+  width: max-content; max-width: calc(100vw - 2 * var(--s4));
+  display: flex; align-items: center; gap: var(--s1); padding: 0 var(--s1) 0 var(--s4); min-height: 52px;
+  border-radius: var(--r-md); background: var(--inverse); color: var(--inverse-fg); box-shadow: var(--shadow); font-size: var(--text-2);
+  transform: translate(-50%, 0); opacity: 1; transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.toast[hidden] { display: flex; opacity: 0; transform: translate(-50%, 12px); pointer-events: none; visibility: hidden; }
+.toast span { margin-right: var(--s2); }
+@media (min-width: 768px) { .toast { bottom: calc(var(--s4) + env(safe-area-inset-bottom, 0px)); } }
+.toast button { min-height: var(--hit); padding: 0 var(--s2); border: 0; background: none; color: var(--inverse-accent); font-weight: var(--w-semi); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+body { padding-top: env(safe-area-inset-top, 0px); }
+
+</style>
+</head>
+<body>
+<nav class="tabbar" aria-label="Main">
+  <div class="tabbar-in">
+    <button type="button" class="tab" data-route="next" id="nav-next">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/></svg>
+      <span>Next</span>
+    </button>
+    <button type="button" class="tab" data-route="procedures" id="nav-procedures">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="7" height="7" rx="2"/><rect x="13.5" y="4" width="7" height="7" rx="2"/><rect x="3.5" y="14" width="7" height="7" rx="2"/><rect x="13.5" y="14" width="7" height="7" rx="2"/></svg>
+      <span>Procedures</span>
+    </button>
+    <button type="button" class="tab" data-route="blocks" id="nav-blocks">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+      <span>Blocks</span>
+    </button>
+    <button type="button" class="tab" id="nav-more" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18.5" cy="12" r="1.6"/></svg>
+      <span>More</span>
+    </button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="page">
+    <section class="panel" id="panel-setup" aria-labelledby="setup-h" hidden>
+      <form id="setup-form" novalidate>
+        <h1 class="page-title" id="setup-h" tabindex="-1">Which section are you in?</h1>
+        <fieldset class="sections" aria-describedby="setup-err">
+          <legend class="vh">Section</legend>
+          <div class="cards" id="section-list"></div>
+        </fieldset>
+        <p class="err setup-err" id="setup-err" role="alert" hidden></p>
+        <div class="setup-actions">
+          <button class="btn" type="button" id="setup-cancel">Cancel</button>
+          <button class="btn primary" type="submit" id="setup-save">Save section</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel" id="panel-next" aria-labelledby="next-h" hidden>
+      <h1 class="page-title" id="next-h" tabindex="-1"></h1>
+      <section class="section" aria-labelledby="nx-proc-h" style="--c: var(--pri)">
+        <div class="sec-head"><h2 id="nx-proc-h" style="color: var(--fg)">Procedures to chase</h2><button type="button" class="link" data-route="procedures">See all</button></div>
+        <div class="cards" id="next-procs"></div>
+      </section>
+      <section class="section" id="next-block" aria-labelledby="nx-block-h">
+        <div class="sec-head"><h2 id="nx-block-h"></h2><span class="count" id="nx-block-left"></span></div>
+        <div class="cards" id="next-items"></div>
+        <button type="button" class="link more-link" id="nx-block-open"></button>
+      </section>
+      <div class="reminder" id="reminder" hidden>
+        <p id="reminder-text"></p>
+        <button type="button" class="btn" data-backup>Back up now</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-procedures" aria-labelledby="proc-h" hidden>
+      <h1 class="page-title" id="proc-h" tabindex="-1">Procedures</h1>
+      <div class="filter seg" role="group" aria-label="Show">
+        <button type="button" data-filter="outstanding">Outstanding</button>
+        <button type="button" data-filter="all">All</button>
+        <button type="button" data-filter="complete">Complete</button>
+      </div>
+      <section class="section" aria-labelledby="pri-h" style="--c: var(--pri)">
+        <div class="sticky">
+          <div class="sec-head"><h2 id="pri-h">Priority</h2><span class="count" id="pri-count"></span></div>
+          <div class="labels-strip" aria-hidden="true"><span></span><div class="proc-grid box-labels"><span class="att-l">Attempts</span><span class="comp-l">Competency</span></div></div>
+        </div>
+        <div class="cards" id="pri-list"></div>
+      </section>
+      <section class="section" aria-labelledby="req-h" style="--c: var(--req)">
+        <div class="sticky">
+          <div class="sec-head"><h2 id="req-h">Required</h2><span class="count" id="req-count"></span></div>
+          <div class="labels-strip" aria-hidden="true"><span></span><div class="proc-grid box-labels"><span class="att-l" style="grid-column: 1 / span 2">Attempts</span></div></div>
+        </div>
+        <div class="cards" id="req-list"></div>
+      </section>
+    </section>
+
+    <section class="panel" id="panel-blocks" aria-labelledby="block-h" hidden>
+      <div class="chips" id="picker" role="group" aria-label="Choose block"></div>
+      <div class="hero" id="hero">
+        <p class="hero-n" id="hero-n"></p>
+        <h1 id="block-h" tabindex="-1"></h1>
+        <div class="hero-meta"><span id="hero-dates"></span><span class="hero-left" id="hero-left"></span></div>
+      </div>
+      <div id="block-body"></div>
+    </section>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden>
+  <span id="toast-msg"></span>
+  <button type="button" id="toast-date">Change date</button>
+  <button type="button" id="toast-undo">Undo</button>
+</div>
+
+<dialog id="dlg-box" aria-labelledby="box-title">
+  <form method="dialog" id="box-form" novalidate>
+    <div>
+      <h2 id="box-title"></h2>
+      <p class="dlg-sub" id="box-sub"></p>
+    </div>
+    <div class="field">
+      <label for="box-date">Date</label>
+      <input class="input" type="date" id="box-date" aria-describedby="box-err">
+      <div class="quick">
+        <button class="btn" type="button" data-quick="0">Today</button>
+        <button class="btn" type="button" data-quick="1">Yesterday</button>
+      </div>
+      <p class="err" id="box-err" hidden></p>
+    </div>
+    <div class="dlg-actions">
+      <button class="btn quiet" type="button" id="box-clear">Clear date</button>
+      <span class="spacer"></span>
+      <button class="btn" type="button" data-close>Cancel</button>
+      <button class="btn primary" type="submit" id="box-save">Save date</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="dlg-item" aria-labelledby="item-title">
+  <form method="dialog" id="item-form" novalidate>
+    <div>
+      <h2 id="item-title"></h2>
+      <p class="dlg-sub" id="item-sub"></p>
+    </div>
+    <div class="field">
+      <label for="item-note">Note</label>
+      <textarea class="input" id="item-note" rows="3" maxlength="500" aria-describedby="item-note-hint"></textarea>
+      <p class="hint" id="item-note-hint">No patient details.</p>
+    </div>
+    <div class="dlg-actions">
+      <span class="spacer"></span>
+      <button class="btn" type="button" data-close>Cancel</button>
+      <button class="btn primary" type="submit">Save note</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="dlg-more" aria-labelledby="more-title">
+  <form method="dialog" class="more-form">
+    <h2 id="more-title">More</h2>
+    <div class="more-group">
+      <h3>Your section</h3>
+      <div class="more-row">
+        <p class="more-text" id="more-section"></p>
+        <button class="btn" type="button" id="change-section">Change section</button>
+      </div>
+    </div>
+    <div class="more-group">
+      <h3>Backup</h3>
+      <p class="status" id="status"></p>
+      <div class="more-actions">
+        <button class="btn primary" type="button" data-backup>Back up</button>
+        <button class="btn" type="button" id="restore">Restore</button>
+      </div>
+      <input type="file" id="restore-file" accept="application/json,.json" class="vh" tabindex="-1" aria-hidden="true">
+    </div>
+    <div class="more-group" id="install-tip">
+      <h3>Add to home screen</h3>
+      <p class="more-text">In Safari, tap Share, then Add to Home Screen. It then opens like an app and works offline.</p>
+    </div>
+    <div class="dlg-actions">
+      <span class="spacer"></span>
+      <button class="btn" type="button" data-close>Close</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="dlg-confirm" aria-labelledby="confirm-title">
+  <form method="dialog" id="confirm-form">
+    <div>
+      <h2 id="confirm-title">Replace data on this device?</h2>
+      <p class="dlg-sub" id="confirm-sub"></p>
+    </div>
+    <div class="dlg-actions">
+      <span class="spacer"></span>
+      <button class="btn" type="button" data-close autofocus>Cancel</button>
+      <button class="btn danger" type="submit">Replace data</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+/* Content. Requirements come from the Section 4 ePortfolio, 2026-27. Each specialty is assumed to carry the same requirements whichever block it falls in. */
+const PROCEDURES = {
+  priority: [
+    ['ecg', 'ECG Recording (3 and 12 lead)'],
+    ['inj-id', 'Injection, Intradermal (ID)'],
+    ['inj-im', 'Injection, Intramuscular (IM)'],
+    ['inj-sc', 'Injection, Subcutaneous (SC)'],
+    ['iv-cannulation', 'IV Cannulation (Peripheral Venous Catheter)'],
+    ['phleb-needle', 'Phlebotomy, Blood Collection Needle'],
+    ['phleb-cultures', 'Phlebotomy, Blood Cultures'],
+    ['phleb-winged', 'Phlebotomy, Winged Blood Collection Needle'],
+    ['wound-closure', 'Wound Closure, Sutures, Steri-strips or other'],
+    ['urinary-cath', 'Urinary Catheterisation (female or male)']
+  ],
+  required: [
+    ['abg', 'Arterial Blood Gases (radial sample)'],
+    ['blood-glucose', 'Blood Glucose (machine usage and sample)'],
+    ['iv-infusion', 'IV Infusion (Gravity)'],
+    ['iv-bolus', 'Intravenous Bolus (via an IV cannula)'],
+    ['local-anaesth', 'Local Anaesthetic, Topical or Intradermal'],
+    ['med-prep', 'Medication, Preparation (Reconstitution / Dilution)'],
+    ['ng-tube', 'Naso-gastric Tube (insertion and position check)'],
+    ['surgical-scrub', 'Surgical Scrubbing'],
+    ['urine-preg', 'Urine Pregnancy Test'],
+    ['urinalysis', 'Urinalysis'],
+    ['vbg', 'Venous Blood Gases'],
+    ['nebulisers', 'Respiratory, Nebulisers (administration)'],
+    ['oxygen-therapy', 'Respiratory, Oxygen Therapy (masks / cannula)'],
+    ['wound-swab', 'Wound Swab, Wound or Skin'],
+    ['peak-flow', 'Respiratory Function, Peak Flow']
+  ]
+};
+
+const CATEGORIES = [
+  ['lg', 'Learning Goals'],
+  ['cl', 'Clinical Case Logs'],
+  ['wa', 'Workplace Assessments'],
+  ['at', 'Attendance'],
+  ['rf', 'Reflection'],
+  ['ec', 'Essential Core Cases']
+];
+
+/* The seven block periods are the same for every section. Deadline is the Friday at 5.00pm. */
+const PERIODS = [
+  { n: 1, start: '2026-06-08', end: '2026-07-17' },
+  { n: 2, start: '2026-08-03', end: '2026-09-11' },
+  { n: 3, start: '2026-09-14', end: '2026-10-23' },
+  { n: 4, start: '2026-11-09', end: '2026-12-18' },
+  { n: 5, start: '2027-01-11', end: '2027-02-19' },
+  { n: 6, start: '2027-02-22', end: '2027-04-02' },
+  { n: 7, start: '2027-04-19', end: '2027-05-28' }
+];
+
+/* Each item: [category, text, target]. A target gives that many boxes. */
+const SPECIALTIES = {
+  ltc: { name: 'Long Term Conditions and Integrated Care', short: 'Long Term', items: [
+    ['lg', 'SMART Learning Goals, minimum 3, set week 1 and progress at week 6', 3],
+    ['cl', 'Inpatient case'],
+    ['cl', 'Outpatient case'],
+    ['cl', 'Speciality Preference case'],
+    ['cl', 'Community case'],
+    ['wa', 'Rehabilitation Clerking, proforma plus reflection'],
+    ['rf', 'End of Block Reflection on realistic medicine and holistic care'],
+    ['ec', 'Diabetes Emergencies, 10 questions'],
+    ['ec', 'Fall 1, 5 questions'],
+    ['ec', 'Primary Care Diagnostic Uncertainty and Complexity, 9 questions'],
+    ['ec', 'Primary Care Functional Neurological Disorder, 8 questions']
+  ]},
+  rch: { name: 'Reproductive and Child Health', short: 'Repro and Child', items: [
+    ['lg', 'Gynaecology'],
+    ['lg', 'Obstetric'],
+    ['lg', 'Medical Paediatrics'],
+    ['lg', 'Surgical Paediatrics'],
+    ['lg', 'Neonatology'],
+    ['cl', 'Gynaecology case'],
+    ['cl', 'Obstetric case'],
+    ['cl', 'Postnatal or Sexual Health case'],
+    ['cl', 'Medical Paediatrics case'],
+    ['cl', 'Surgical Paediatrics case'],
+    ['cl', 'Neonatology case'],
+    ['wa', 'Pregnant abdomen / Antenatal examination'],
+    ['wa', 'Speculum examination'],
+    ['wa', 'Births'],
+    ['wa', 'Mini-CEX, Obstetrics'],
+    ['wa', 'Mini-CEX, Gynaecology or Sexual Health'],
+    ['wa', 'Mini-CEX or CBD, Medical Paediatrics'],
+    ['wa', 'Mini-CEX or CBD, Surgical Paediatrics'],
+    ['wa', 'Mini-CEX, Newborn Examination'],
+    ['at', 'Midwifery shift'],
+    ['at', 'Obstetrics shift, Labour Ward'],
+    ['at', 'Obstetrics theatre shift'],
+    ['at', 'Gynaecology theatre shift'],
+    ['ec', 'Obstetrics, Case 1'],
+    ['ec', 'Gynaecology, Acute Pelvic Pain, Case 2'],
+    ['ec', 'Acute Lymphoblastic Leukaemia, Case 1'],
+    ['ec', 'Paediatric Ward Round, Case 2']
+  ]},
+  spd: { name: 'Specialty Preference and Diagnostics', short: 'Diagnostics', items: [
+    ['lg', 'SMART Learning Goals, minimum 3', 3],
+    ['cl', 'Specialty preference case'],
+    ['rf', 'End of Block Reflection on realistic medicine and holistic care']
+  ]},
+  amc: { name: 'Acute Medicine and Critical Care', short: 'Acute', items: [
+    ['lg', 'SMART Learning Goals, minimum 3', 3],
+    ['cl', 'Case logs, 1 to 2 line de-identified, minimum 6', 6],
+    ['wa', 'Mini-CEX, acute or deteriorating patient, presenting symptom, or investigation'],
+    ['wa', 'Case Based Discussion, student choice'],
+    ['ec', 'Chest Pain'],
+    ['ec', 'Management of Medical Patient in Remote and Rural Location'],
+    ['ec', 'The Deteriorating Patient'],
+    ['ec', 'The Deteriorating Patient 2'],
+    ['ec', 'Oxygen Therapy']
+  ]},
+  mh: { name: 'Mental Health', short: 'Mental Health', items: [
+    ['lg', 'SMART Learning Goals, minimum 3', 3],
+    ['cl', 'Psychotic Disorder'],
+    ['cl', 'Cognitive Impairment'],
+    ['cl', 'Depression'],
+    ['cl', 'Substance Misuse'],
+    ['cl', 'Observe a new patient assessment'],
+    ['wa', 'Case Report'],
+    ['wa', 'Case Report 2 or GP Letter'],
+    ['wa', 'Mini-CEX'],
+    ['rf', 'Reflection on learning experiences during block'],
+    ['ec', 'Anxiety Spectrum Disorders'],
+    ['ec', 'Mania, Hypomania and Bipolar Affective Disorder'],
+    ['ec', 'Psychiatry Case 1']
+  ]},
+  scc: { name: 'Surgery and Critical Care', short: 'Surgery', items: [
+    ['lg', 'SMART Learning Goals, minimum 3', 3],
+    ['cl', 'Case logs with activity, date and involvement, de-identified, minimum 12', 12],
+    ['wa', 'Mini-CEX, examine a body part and present'],
+    ['wa', 'Mini-CEX, interpret an investigation'],
+    ['wa', 'Mini-CEX, history, explanation, consent or procedure'],
+    ['wa', 'CBD, emergency surgical admission'],
+    ['wa', 'CBD, elective surgery case'],
+    ['wa', 'CBD, peri-operative care'],
+    ['wa', 'Formative OSCE, 8 minutes, 3 required', 3],
+    ['ec', 'Management of Surgical Patient in Remote and Rural Location'],
+    ['ec', 'Acute Compartment Syndrome'],
+    ['ec', 'Leg Ulcers, clinical case'],
+    ['rf', 'Reflective Assignment, 500 words']
+  ]},
+  gp: { name: 'General Practice', short: 'GP', items: [
+    ['lg', 'Learning goals agreed with GP supervisor and progress updated, 3 to 6', 3],
+    ['cl', 'GP case logs, face to face, phone or video, 50 to 250 words, de-identified, 12 required', 12],
+    ['wa', 'Mini-CEX with a senior clinician, on iPad'],
+    ['rf', 'Reflective piece on evidence use, 500 to 1200 words, 2 or more references'],
+    ['ec', 'Generalism'],
+    ['ec', 'Palliative Care in General Practice'],
+    ['ec', 'Primary Care Pharmacy and Prescribing']
+  ]}
+};
+
+/* Rotation from the Year 4 R&R timetable: the specialty each section has in blocks 1 to 7. */
+const ROTATION = {
+  1: ['amc', 'mh', 'scc', 'gp', 'ltc', 'rch', 'spd'],
+  2: ['spd', 'amc', 'mh', 'scc', 'gp', 'ltc', 'rch'],
+  3: ['rch', 'spd', 'amc', 'mh', 'scc', 'gp', 'ltc'],
+  4: ['ltc', 'rch', 'spd', 'amc', 'mh', 'scc', 'gp'],
+  5: ['gp', 'ltc', 'rch', 'spd', 'amc', 'mh', 'scc'],
+  6: ['scc', 'gp', 'ltc', 'rch', 'spd', 'amc', 'mh'],
+  7: ['mh', 'scc', 'gp', 'ltc', 'rch', 'spd', 'amc']
+};
+
+(() => {
+  'use strict';
+
+  const KEY = 'y4signoffs.v1';
+  const FILTER_KEY = 'y4signoffs.filter';
+  const DAY = 86400000;
+  const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const MONTH = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const WD = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const WEEKDAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* ---------- dates ---------- */
+  const isISO = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s) && !isNaN(parse(s));
+  const pad = n => String(n).padStart(2, '0');
+  const iso = d => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  function parse(s) { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); }
+  function today() {
+    let q = null;
+    try { q = new URLSearchParams(location.search).get('today'); } catch (e) { /* ignore */ }
+    return q && isISO(q) ? q : iso(new Date());
+  }
+  const daysBetween = (a, b) => Math.round((parse(b) - parse(a)) / DAY);
+  const fmtShort = s => { const d = parse(s); return d.getDate() + ' ' + MON[d.getMonth()]; };
+  const fmtLong = s => { const d = parse(s); return d.getDate() + ' ' + MON[d.getMonth()] + ' ' + d.getFullYear(); };
+  const fmtSlash = s => { const d = parse(s); return pad(d.getDate()) + '/' + pad(d.getMonth() + 1) + '/' + String(d.getFullYear()).slice(2); };
+  const fmtDay = s => WD[parse(s).getDay()] + ' ' + fmtLong(s);
+  const fmtTitle = s => { const d = parse(s); return WEEKDAY[d.getDay()] + ' ' + d.getDate() + ' ' + MONTH[d.getMonth()]; };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  const plural = (n, one, many) => n + ' ' + (n === 1 ? one : many);
+
+  /* ---------- content model ---------- */
+  const PROC = [
+    ...PROCEDURES.priority.map(([id, name]) => ({ id, name, kind: 'priority', total: 5, weight: 1.35 })),
+    ...PROCEDURES.required.map(([id, name]) => ({ id, name, kind: 'required', total: 2, weight: 1.0 }))
+  ];
+  const PROC_BY_ID = Object.fromEntries(PROC.map(p => [p.id, p]));
+  const CAT_NAME = Object.fromEntries(CATEGORIES);
+  const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48);
+  const ITEMS = {};
+  Object.entries(SPECIALTIES).forEach(([key, sp]) => {
+    sp.key = key;
+    sp.list = sp.items.map(([cat, text, target]) => {
+      const it = { id: key + '.' + cat + '.' + slug(text), cat, text, n: target || 1, spec: sp };
+      if (ITEMS[it.id]) throw new Error('Duplicate item id ' + it.id);
+      ITEMS[it.id] = it;
+      return it;
+    });
+  });
+  // Saved data from before sections existed used block numbers; that data was Section 4.
+  const LEGACY = ROTATION[4];
+  // The blocks for the chosen section: same dates for everyone, different specialty order.
+  let BLOCKS = [];
+  function setSection(n) {
+    BLOCKS = PERIODS.map((pd, i) => {
+      const sp = SPECIALTIES[ROTATION[n][i]];
+      return { n: pd.n, start: pd.start, end: pd.end, spec: sp, name: sp.name, short: sp.short, list: sp.list };
+    });
+  }
+  const blockOf = it => BLOCKS.find(b => b.spec === it.spec);
+
+  /* ---------- state and storage ---------- */
+  const blank = () => ({ v: 3, section: null, p: {}, b: {}, backupAt: null });
+  const validSection = n => Number.isInteger(n) && n >= 1 && n <= 7;
+  let state = blank();
+  let storageOK = true;
+  let askedPersist = false;
+
+  function sanitize(raw) {
+    const out = blank();
+    const rp = raw && typeof raw.p === 'object' && raw.p ? raw.p : {};
+    const rb0 = raw && typeof raw.b === 'object' && raw.b ? raw.b : {};
+    const rb = {};
+    Object.keys(rb0).forEach(k => {
+      const m = k.match(/^b([1-7])\.(.+)$/);
+      rb[m ? LEGACY[Number(m[1]) - 1] + '.' + m[2] : k] = rb0[k];
+    });
+    if (raw && validSection(Number(raw.section))) out.section = Number(raw.section);
+    PROC.forEach(p => {
+      const arr = Array.isArray(rp[p.id]) ? rp[p.id] : [];
+      const slots = Array.from({ length: p.total }, (_, i) => (isISO(arr[i]) ? arr[i] : null));
+      if (slots.some(Boolean)) out.p[p.id] = slots;
+    });
+    Object.values(ITEMS).forEach(it => {
+      const r = rb[it.id];
+      if (!r || typeof r !== 'object') return;
+      let s = Array.isArray(r.s) ? r.s : [];
+      if (!s.length && (isISO(r.d) || Number.isInteger(r.c))) {
+        const fill = it.n === 1 ? (isISO(r.d) ? 1 : 0) : Math.min(r.c || 0, it.n);
+        s = Array.from({ length: fill }, () => (isISO(r.d) ? r.d : iso(new Date())));
+      }
+      const v = {};
+      const slots = Array.from({ length: it.n }, (_, i) => (isISO(s[i]) ? s[i] : null));
+      if (slots.some(Boolean)) v.s = slots;
+      if (typeof r.n === 'string' && r.n.trim()) v.n = r.n.slice(0, 500);
+      if (Object.keys(v).length) out.b[it.id] = v;
+    });
+    if (raw && typeof raw.backupAt === 'string' && !isNaN(Date.parse(raw.backupAt))) out.backupAt = raw.backupAt;
+    return out;
+  }
+
+  function load() {
+    try {
+      const s = localStorage.getItem(KEY);
+      state = s ? sanitize(JSON.parse(s)) : blank();
+      localStorage.setItem(KEY + '.probe', '1');
+      localStorage.removeItem(KEY + '.probe');
+      storageOK = true;
+    } catch (e) {
+      storageOK = false;
+    }
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(state));
+      storageOK = true;
+    } catch (e) {
+      storageOK = false;
+    }
+    if (!askedPersist && navigator.storage && navigator.storage.persist) {
+      askedPersist = true;
+      navigator.storage.persist().catch(() => {});
+    }
+    queueFileWrite();
+    renderStatus();
+  }
+
+  const slotsOf = p => state.p[p.id] || Array(p.total).fill(null);
+  const procDone = p => slotsOf(p).every(Boolean);
+  const rec = id => state.b[id] || {};
+  const itemSlots = it => rec(it.id).s || Array(it.n).fill(null);
+  const isDone = it => itemSlots(it).every(Boolean);
+  const specColour = sp => ({ c: 'var(--s-' + sp.key + ')', cs: 'var(--s-' + sp.key + '-solid)' });
+  const blockColour = b => specColour(b.spec);
+  const kindColour = p => (p.kind === 'priority' ? 'var(--pri)' : 'var(--req)');
+  const hasData = () => Object.keys(state.p).length > 0 || Object.keys(state.b).length > 0;
+
+  /* ---------- ranking (weighted even fill) ---------- */
+  function ranking() {
+    const t = today();
+    return PROC.map(p => {
+      const filled = slotsOf(p).filter(Boolean);
+      const remaining = p.total - filled.length;
+      if (remaining === 0) return null;
+      const last = filled.length ? filled.reduce((a, b) => (a > b ? a : b)) : null;
+      const stale = last ? Math.min(120, Math.max(0, daysBetween(last, t))) : 120;
+      const score = (remaining / p.total) * p.weight + (stale / 120) * 0.25;
+      return { p, score };
+    }).filter(Boolean).sort((a, b) => (Math.abs(b.score - a.score) > 1e-9 ? b.score - a.score : a.p.name.localeCompare(b.p.name, 'en-GB')));
+  }
+
+  function blockToday() {
+    const t = today();
+    const cur = BLOCKS.find(b => b.start <= t && t <= b.end);
+    if (cur) return { b: cur, mode: 'current' };
+    const next = BLOCKS.find(b => b.start > t);
+    if (next) return { b: next, mode: 'next' };
+    return { b: BLOCKS[BLOCKS.length - 1], mode: 'after' };
+  }
+
+  function timeLeft(b) {
+    const t = today();
+    if (b.end < t) return 'Finished';
+    if (b.start > t) return 'Starts in ' + plural(daysBetween(t, b.start), 'day', 'days');
+    const d = daysBetween(t, b.end);
+    return d === 0 ? 'Due today' : plural(d, 'day', 'days') + ' left';
+  }
+
+  /* ---------- view state ---------- */
+  let current = null;
+  let selBlock = null;
+  let filter = 'outstanding';
+  try { const f = localStorage.getItem(FILTER_KEY); if (['outstanding', 'all', 'complete'].includes(f)) filter = f; } catch (e) { /* ignore */ }
+  const openCards = new Set(); // completed procedure cards expanded on a phone
+  const keepProc = new Set();  // completed during this visit, kept in place until you leave the view
+  const keepItem = new Set();
+  const scrollPos = {};
+  let nextOrder = null;
+
+  /* ---------- boxes and cards ---------- */
+  const procSlotLabel = (p, i) => (p.kind === 'priority' && i === 4 ? 'Competency assessment' : 'Attempt ' + (i + 1));
+  const itemSlotLabel = (it, i) => (it.n === 1 ? 'Done' : (i + 1) + ' of ' + it.n);
+
+  function procBox(p, i, val, scope) {
+    const comp = p.kind === 'priority' && i === 4;
+    const label = p.name + ', ' + procSlotLabel(p, i).toLowerCase() + ', ' + (val ? 'signed off ' + fmtLong(val) + '. Change date' : 'sign off today');
+    const inner = val ? '<span class="d">' + fmtShort(val) + '</span><span class="y">' + parse(val).getFullYear() + '</span>' : '';
+    return '<button type="button" class="box' + (comp ? ' comp' : '') + (val ? ' on' : '') + '" data-kind="p" data-key="' + p.id + '" data-i="' + i +
+      '" data-fk="' + scope + '|p|' + p.id + '|' + i + '" aria-label="' + esc(label) + '">' + inner + '</button>';
+  }
+
+  function itemBox(it, i, val, scope) {
+    const label = it.text + ', ' + itemSlotLabel(it, i).toLowerCase() + ', ' + (val ? 'done ' + fmtLong(val) + '. Change date' : 'mark done today');
+    return '<button type="button" class="box' + (val ? ' on' : '') + '" data-kind="b" data-key="' + it.id + '" data-i="' + i +
+      '" data-fk="' + scope + '|b|' + it.id + '|' + i + '" aria-label="' + esc(label) + '">' + (val ? '<span class="d">' + fmtShort(val) + '</span>' : '') + '</button>';
+  }
+
+  function procCard(p, scope, opts = {}) {
+    const slots = slotsOf(p);
+    const n = slots.filter(Boolean).length;
+    const complete = n === p.total;
+    const open = opts.open || openCards.has(p.id);
+    const kind = opts.kind ? '<span class="card-kind">' + (p.kind === 'priority' ? 'Priority' : 'Required') + '</span>' : '';
+    const inner = '<span class="card-title">' + kind + esc(p.name) + '</span>' +
+      '<span class="card-count" aria-label="' + n + ' of ' + p.total + ' signed off">' + n + ' of ' + p.total + '</span>';
+    const gid = scope + '-grid-' + p.id;
+    const head = complete && !opts.open
+      ? '<button type="button" class="toggle" data-toggle="' + p.id + '" data-fk="' + scope + '|t|' + p.id + '" aria-expanded="' + open + '" aria-controls="' + gid + '">' + inner + '<span class="chev" aria-hidden="true"></span></button>'
+      : '<div class="card-head">' + inner + '</div>';
+    const labels = opts.labels && p.kind === 'priority'
+      ? '<div class="proc-grid box-labels card-labels" aria-hidden="true"><span class="att-l">Attempts</span><span class="comp-l">Competency</span></div>' : '';
+    return '<div class="card proc' + (complete ? ' complete' : '') + (open ? ' open' : '') + '" data-card="p:' + p.id + '" style="--c: ' + kindColour(p) + '">' + head + labels +
+      '<div class="boxes proc-grid" id="' + gid + '">' + slots.map((v, i) => procBox(p, i, v, scope)).join('') + '</div></div>';
+  }
+
+  function itemCard(it, scope, opts = {}) {
+    const r = rec(it.id);
+    const slots = itemSlots(it);
+    const n = slots.filter(Boolean).length;
+    const done = n === it.n;
+    const single = it.n === 1;
+    const boxes = slots.map((v, i) => itemBox(it, i, v, scope)).join('');
+    const cat = opts.cat ? '<span class="card-kind">' + CAT_NAME[it.cat] + '</span>' : '';
+    const col = specColour(it.spec);
+    return '<div class="card item' + (done ? ' complete' : '') + (single ? ' single' : '') + '" data-card="b:' + it.id + '" style="--c: ' + col.c + '">' +
+      '<div class="item-head"><div style="min-width:0"><span class="card-title">' + cat + esc(it.text) + '</span>' +
+      (r.n ? '<p class="card-note">' + esc(r.n.split('\n')[0]) + '</p>' : '') + '</div>' +
+      (single ? '' : '<span class="card-count">' + n + ' of ' + it.n + '</span>') +
+      '<button type="button" class="note-btn" data-note="' + it.id + '" data-fk="' + scope + '|n|' + it.id + '" aria-label="' + esc((r.n ? 'Edit note for ' : 'Add note to ') + it.text) + '">' + (r.n ? 'Edit note' : 'Note') + '</button>' +
+      (single ? '<div class="single-box">' + boxes + '</div>' : '') + '</div>' +
+      (single ? '' : '<div class="boxes slot-grid">' + boxes + '</div>') + '</div>';
+  }
+
+  /* ---------- Next ---------- */
+  function renderNext() {
+    $('#next-h').textContent = fmtTitle(today());
+    // The order is worked out when you open Next and then held, so a card never jumps away under your finger.
+    if (!nextOrder) nextOrder = ranking().slice(0, 5).map(x => x.p.id);
+    const shown = nextOrder.map(id => PROC_BY_ID[id]);
+    $('#next-procs').innerHTML = shown.length
+      ? shown.map(p => procCard(p, 'n', { labels: true, kind: true, open: true })).join('')
+      : '<p class="empty">All 25 procedures are complete.</p>';
+
+    const bt = blockToday();
+    const b = bt.b;
+    const col = blockColour(b);
+    const sec = $('#next-block');
+    sec.style.setProperty('--c', col.c);
+    sec.style.setProperty('--cs', col.cs);
+    $('#nx-block-h').textContent = (bt.mode === 'next' ? 'Next: ' : '') + 'Block ' + b.n + ', ' + b.short;
+    $('#nx-block-left').textContent = timeLeft(b);
+    const todo = b.list.filter(it => !isDone(it) || keepItem.has(it.id));
+    const list = todo.slice(0, 6);
+    $('#next-items').innerHTML = list.length
+      ? list.map(it => itemCard(it, 'n', { cat: true })).join('')
+      : '<p class="empty">Everything in Block ' + b.n + ' is done.</p>';
+    const open = $('#nx-block-open');
+    open.dataset.route = 'blocks-' + b.n;
+    open.textContent = todo.length > list.length ? 'See all ' + todo.length + ' outstanding in Block ' + b.n : 'Open Block ' + b.n;
+    renderReminder();
+  }
+
+  /* ---------- Procedures ---------- */
+  function renderProcedures() {
+    $$('[data-filter]').forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.filter === filter)));
+    ['priority', 'required'].forEach(kind => {
+      const list = PROC.filter(p => p.kind === kind);
+      const done = list.filter(procDone);
+      let shown;
+      if (filter === 'outstanding') shown = list.filter(p => !procDone(p) || keepProc.has(p.id));
+      else if (filter === 'complete') shown = done;
+      else shown = list.filter(p => !procDone(p)).concat(done);
+      const empty = filter === 'complete'
+        ? '<p class="empty">No ' + kind + ' procedures complete yet.</p>'
+        : '<p class="empty">All ' + list.length + ' ' + kind + ' procedures are complete.</p>';
+      $(kind === 'priority' ? '#pri-list' : '#req-list').innerHTML = shown.length
+        ? shown.map(p => procCard(p, 'p', { open: filter === 'complete' })).join('') : empty;
+      $(kind === 'priority' ? '#pri-count' : '#req-count').textContent = done.length + ' of ' + list.length + ' complete';
+    });
+  }
+
+  /* ---------- Blocks ---------- */
+  function renderPicker() {
+    const bt = blockToday();
+    $('#picker').innerHTML = BLOCKS.map(b => {
+      const col = blockColour(b);
+      const done = b.list.every(isDone);
+      const here = b === bt.b && bt.mode !== 'after';
+      const tag = done ? 'Done' : (here ? (bt.mode === 'current' ? 'Now' : 'Next') : '');
+      return '<button type="button" data-route="blocks-' + b.n + '" aria-pressed="' + (b === selBlock) + '" style="--c: ' + col.c + '; --cs: ' + col.cs + '"' +
+        ' aria-label="' + esc('Block ' + b.n + ', ' + b.name + (tag ? ', ' + tag.toLowerCase() : '')) + '">' +
+        '<span class="num">' + b.n + '</span>' + esc(b.short) + (tag ? '<span class="state">' + tag + '</span>' : '') + '</button>';
+    }).join('');
+  }
+
+  function renderHero(b) {
+    const t = today();
+    const bt = blockToday();
+    const due = fmtDay(b.end) + ', 5.00pm';
+    const range = fmtSlash(b.start) + ' to ' + fmtSlash(b.end);
+    let n = 'Block ' + b.n, h = b.name, dates;
+    if (bt.b === b && bt.mode === 'next') { n = 'Next block, Block ' + b.n; h = 'Next: ' + b.name; dates = 'Starts ' + fmtDay(b.start) + '. Due ' + due + '.'; }
+    else if (b.end < t) dates = range + '. Deadline was ' + due + '.';
+    else dates = range + '. Due ' + due + '.';
+    $('#hero-n').textContent = n;
+    $('#block-h').textContent = h;
+    $('#hero-dates').textContent = dates;
+    $('#hero-left').textContent = timeLeft(b);
+  }
+
+  function renderBlock() {
+    const b = selBlock;
+    const col = blockColour(b);
+    const panel = $('#panel-blocks');
+    panel.style.setProperty('--c', col.c);
+    panel.style.setProperty('--cs', col.cs);
+    renderPicker();
+    renderHero(b);
+    $('#block-body').innerHTML = CATEGORIES.map(([cat, name]) => {
+      const its = b.list.filter(it => it.cat === cat);
+      if (!its.length) return '';
+      const hid = 'cat-' + b.n + '-' + cat;
+      return '<section class="cat" aria-labelledby="' + hid + '"><div class="sec-head"><h2 class="h3" id="' + hid + '">' + name + '</h2>' +
+        (its.length > 1 ? '<span class="count">' + its.filter(isDone).length + ' of ' + its.length + '</span>' : '') + '</div>' +
+        '<div class="cards">' + its.map(it => itemCard(it, 'b')).join('') + '</div></section>';
+    }).join('');
+  }
+
+  /* ---------- rendering with focus and movement kept ---------- */
+  function renderView(name) {
+    if (name === 'setup') renderSetup();
+    else if (name === 'next') renderNext();
+    else if (name === 'procedures') renderProcedures();
+    else if (name === 'blocks') renderBlock();
+  }
+  function refresh(focusKey) {
+    const panel = current && $('#panel-' + current);
+    const before = {};
+    if (panel) $$('[data-card]', panel).forEach(c => { before[c.dataset.card] = c.getBoundingClientRect().top; });
+    const fk = focusKey || (document.activeElement && document.activeElement.dataset && document.activeElement.dataset.fk);
+    renderView(current);
+    if (fk) {
+      const el = document.querySelector('[data-fk="' + fk + '"]');
+      if (el) el.focus({ preventScroll: true });
+    }
+    if (!panel || reduceMotion.matches) return;
+    $$('[data-card]', panel).forEach(c => {
+      const prev = before[c.dataset.card];
+      if (prev === undefined || !c.animate) return;
+      const dy = prev - c.getBoundingClientRect().top;
+      if (Math.abs(dy) > 1) c.animate([{ transform: 'translateY(' + dy + 'px)' }, { transform: 'none' }], { duration: 240, easing: 'cubic-bezier(0.2, 0, 0, 1)' });
+    });
+  }
+
+  /* ---------- sign off: one tap fills the next empty box with today ---------- */
+  let lastSlot = null;
+  function firstEmpty(slots, from, to) {
+    for (let j = from; j < to; j++) if (!slots[j]) return j;
+    return -1;
+  }
+  function tapBox(kind, key, i, scope) {
+    if (kind === 'p') {
+      const p = PROC_BY_ID[key];
+      const slots = slotsOf(p).slice();
+      if (slots[i]) return openBox(kind, key, i);
+      const comp = p.kind === 'priority' && i === 4;
+      const j = comp ? 4 : firstEmpty(slots, 0, p.kind === 'priority' ? 4 : 2);
+      snapshot(procSlotLabel(p, j).replace('Competency assessment', 'Competency') + ' signed off');
+      slots[j] = today();
+      state.p[p.id] = slots;
+      keepProc.add(p.id);
+      if (slots.every(Boolean)) openCards.add(p.id);
+      save();
+      lastSlot = { kind, key, i: j };
+      refresh(scope + '|p|' + key + '|' + j);
+    } else {
+      const it = ITEMS[key];
+      const slots = itemSlots(it).slice();
+      if (slots[i]) return openBox(kind, key, i);
+      const j = firstEmpty(slots, 0, it.n);
+      snapshot(it.n === 1 ? 'Marked done' : (j + 1) + ' of ' + it.n + ' done');
+      slots[j] = today();
+      state.b[key] = Object.assign({}, rec(key), { s: slots });
+      keepItem.add(key);
+      save();
+      lastSlot = { kind, key, i: j };
+      refresh(scope + '|b|' + key + '|' + j);
+    }
+    showToast({ date: true });
+  }
+
+  /* box dialog: change or clear a date */
+  const dlgBox = $('#dlg-box');
+  let boxCtx = null;
+  function openBox(kind, key, i) {
+    let title, sub, val, colour;
+    if (kind === 'p') {
+      const p = PROC_BY_ID[key];
+      title = p.name; sub = procSlotLabel(p, i); val = slotsOf(p)[i]; colour = kindColour(p);
+    } else {
+      const it = ITEMS[key];
+      title = it.text; sub = 'Block ' + blockOf(it).n + ', ' + CAT_NAME[it.cat] + (it.n > 1 ? ', ' + itemSlotLabel(it, i) : '');
+      val = itemSlots(it)[i]; colour = specColour(it.spec).c;
+    }
+    const active = document.activeElement;
+    boxCtx = { kind, key, i, fk: active && active.dataset && active.dataset.fk && active.dataset.key === key ? active.dataset.fk : null };
+    dlgBox.style.setProperty('--c', colour);
+    $('#box-title').textContent = title;
+    $('#box-sub').textContent = sub;
+    const input = $('#box-date');
+    input.max = today();
+    input.value = val || today();
+    clearErr(input, $('#box-err'));
+    $('#box-clear').hidden = !val;
+    $('#box-save').textContent = val ? 'Save date' : 'Sign off';
+    showDialog(dlgBox);
+  }
+  $('#box-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const input = $('#box-date');
+    const msg = dateProblem(input.value, true);
+    if (msg) return showErr(input, $('#box-err'), msg);
+    setSlot(input.value);
+  });
+  $('#box-clear').addEventListener('click', () => setSlot(null));
+  function setSlot(val) {
+    const { kind, key, i } = boxCtx;
+    const scope = boxCtx.fk ? boxCtx.fk.split('|')[0] : (current === 'next' ? 'n' : current === 'procedures' ? 'p' : 'b');
+    if (kind === 'p') {
+      const p = PROC_BY_ID[key];
+      snapshot(procSlotLabel(p, i).replace('Competency assessment', 'Competency') + (val ? ' dated ' + fmtShort(val) : ' cleared'));
+      const slots = slotsOf(p).slice();
+      slots[i] = val;
+      keepProc.add(p.id);
+      if (slots.some(Boolean)) state.p[p.id] = slots; else delete state.p[p.id];
+    } else {
+      const it = ITEMS[key];
+      snapshot((it.n === 1 ? 'Date' : itemSlotLabel(it, i)) + (val ? ' set to ' + fmtShort(val) : ' cleared'));
+      const slots = itemSlots(it).slice();
+      slots[i] = val;
+      keepItem.add(key);
+      const r = Object.assign({}, rec(key));
+      if (slots.some(Boolean)) r.s = slots; else delete r.s;
+      if (Object.keys(r).length) state.b[key] = r; else delete state.b[key];
+    }
+    save();
+    dlgBox._opener = null;
+    closeDialog(dlgBox);
+    refresh(scope + '|' + kind + '|' + key + '|' + i);
+    showToast({});
+  }
+
+  /* note dialog */
+  const dlgItem = $('#dlg-item');
+  let noteCtx = null;
+  function openNote(id) {
+    const it = ITEMS[id];
+    const active = document.activeElement;
+    noteCtx = { it, fk: active && active.dataset ? active.dataset.fk : null };
+    dlgItem.style.setProperty('--c', specColour(it.spec).c);
+    $('#item-title').textContent = it.text;
+    $('#item-sub').textContent = 'Block ' + blockOf(it).n + ', ' + CAT_NAME[it.cat];
+    $('#item-note').value = rec(id).n || '';
+    showDialog(dlgItem);
+  }
+  $('#item-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const { it, fk } = noteCtx;
+    const r = Object.assign({}, rec(it.id));
+    const note = $('#item-note').value.trim().slice(0, 500);
+    if (note === (r.n || '')) return closeDialog(dlgItem);
+    snapshot('Note ' + (note ? 'saved' : 'removed'));
+    if (note) r.n = note; else delete r.n;
+    if (Object.keys(r).length) state.b[it.id] = r; else delete state.b[it.id];
+    save();
+    dlgItem._opener = null;
+    closeDialog(dlgItem);
+    refresh(fk);
+    showToast({});
+  });
+
+  /* ---------- undo and messages ---------- */
+  let undo = null;
+  let toastTimer = null;
+  function snapshot(msg) { undo = { msg, data: JSON.stringify({ p: state.p, b: state.b }) }; }
+  function showToast({ date = false, message = null }) {
+    const msg = message || (undo && undo.msg);
+    if (!msg) return;
+    $('#toast-msg').textContent = msg;
+    $('#toast-undo').hidden = !!message || !undo;
+    $('#toast-date').hidden = !date || !!message;
+    $('#toast').hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, date ? 6000 : 5000);
+  }
+  function hideToast() { $('#toast').hidden = true; undo = null; }
+  function say(message) { undo = null; showToast({ message }); }
+  $('#toast-undo').addEventListener('click', () => {
+    if (!undo) return;
+    const d = JSON.parse(undo.data);
+    state.p = d.p; state.b = d.b;
+    save();
+    hideToast();
+    refresh();
+  });
+  $('#toast-date').addEventListener('click', () => {
+    if (!lastSlot) return;
+    const { kind, key, i } = lastSlot;
+    hideToast();
+    openBox(kind, key, i);
+  });
+
+  /* ---------- dialogs and validation ---------- */
+  function showDialog(d) {
+    d._opener = document.activeElement;
+    if (typeof d.showModal === 'function') d.showModal(); else d.setAttribute('open', '');
+  }
+  function closeDialog(d) {
+    if (typeof d.close === 'function') d.close(); else d.removeAttribute('open');
+  }
+  $$('dialog').forEach(d => {
+    d.addEventListener('close', () => { if (d._opener && document.contains(d._opener)) d._opener.focus(); });
+    d.addEventListener('click', e => { if (e.target === d) closeDialog(d); });
+    $$('[data-close]', d).forEach(b => b.addEventListener('click', () => closeDialog(d)));
+  });
+  function dateProblem(v, required) {
+    if (!v) return required ? 'Choose a date.' : '';
+    if (!isISO(v)) return 'Enter a date like ' + fmtSlash(today()) + '.';
+    if (v > today()) return 'Choose a date on or before today.';
+    return '';
+  }
+  function showErr(input, el, msg) {
+    el.textContent = msg; el.hidden = false; input.setAttribute('aria-invalid', 'true');
+    input._erring = true; input.focus(); input._erring = false;
+  }
+  function clearErr(input, el) { el.hidden = true; el.textContent = ''; input.removeAttribute('aria-invalid'); }
+  (() => {
+    const input = $('#box-date');
+    const err = $('#box-err');
+    const fix = () => { if (!input._erring && input.getAttribute('aria-invalid')) clearErr(input, err); };
+    input.addEventListener('input', fix);
+    input.addEventListener('focus', fix);
+    input.addEventListener('blur', () => {
+      const msg = dateProblem(input.value, true);
+      if (msg && dlgBox.open) { err.textContent = msg; err.hidden = false; input.setAttribute('aria-invalid', 'true'); }
+    });
+  })();
+
+  /* ---------- section setup ---------- */
+  let returnTo = 'next';
+  function sectionSummary(n) {
+    const t = today();
+    const order = ROTATION[n].map(k => SPECIALTIES[k]);
+    const i = PERIODS.findIndex(pd => pd.start <= t && t <= pd.end);
+    const j = PERIODS.findIndex(pd => pd.start > t);
+    let now;
+    if (i >= 0) now = 'now ' + order[i].short;
+    else if (j >= 0) now = 'next ' + order[j].short;
+    else now = 'finished with ' + order[6].short;
+    return 'Started with ' + order[0].short + ', ' + now;
+  }
+  function renderSetup() {
+    const chosen = state.section;
+    $('#section-list').innerHTML = Object.keys(ROTATION).map(Number).map(n => {
+      const strip = ROTATION[n].map(k => '<i style="--c: var(--s-' + k + '-solid)"></i>').join('');
+      return '<label class="card section-opt" for="sec-' + n + '">' +
+        '<input type="radio" name="section" id="sec-' + n + '" value="' + n + '"' + (chosen === n ? ' checked' : '') + ' aria-describedby="sec-' + n + '-d">' +
+        '<span class="section-text"><span class="card-title">Section ' + n + '</span><span class="section-sum" id="sec-' + n + '-d">' + esc(sectionSummary(n)) + '</span>' +
+        '<span class="strip" aria-hidden="true">' + strip + '</span></span></label>';
+    }).join('');
+    $('#setup-cancel').hidden = !chosen;
+    $('#setup-err').hidden = true;
+  }
+  $('#setup-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const picked = $('#setup-form input[name="section"]:checked');
+    if (!picked) {
+      const err = $('#setup-err');
+      err.textContent = 'Choose your section to see your block dates.';
+      err.hidden = false;
+      $('#sec-1').focus();
+      return;
+    }
+    const n = Number(picked.value);
+    const first = !state.section;
+    const changed = state.section !== n;
+    state.section = n;
+    setSection(n);
+    nextOrder = null;
+    save();
+    go(first ? 'next' : returnTo);
+    if (first) say('Section ' + n + ' saved.');
+    else if (changed) say('Switched to Section ' + n + '. Your ticks stay with each specialty.');
+  });
+  document.addEventListener('change', e => {
+    if (e.target.name === 'section') $('#setup-err').hidden = true;
+  });
+  $('#setup-cancel').addEventListener('click', () => go(returnTo));
+  $('#change-section').addEventListener('click', () => {
+    const more = $('#dlg-more');
+    more._opener = null;
+    closeDialog(more);
+    returnTo = current === 'setup' ? 'next' : (current === 'blocks' && selBlock ? 'blocks-' + selBlock.n : current);
+    go('setup');
+  });
+
+  /* ---------- routing: each tab and block has its own address ---------- */
+  function parseRoute() {
+    const h = location.hash.slice(1);
+    if (!state.section || h === 'setup') return { tab: 'setup' };
+    if (h === 'procedures') return { tab: 'procedures' };
+    const m = h.match(/^blocks(?:-([1-7]))?$/);
+    if (m) return { tab: 'blocks', n: m[1] ? Number(m[1]) : null };
+    return { tab: 'next' };
+  }
+  let userNav = false;
+  function go(hash) {
+    userNav = true;
+    if (location.hash === '#' + hash) { route(); userNav = false; }
+    else location.hash = hash;
+  }
+  function route() {
+    const fromUser = userNav;
+    const r = parseRoute();
+    const changedTab = r.tab !== current;
+    if (current) scrollPos[current] = window.scrollY;
+    if (changedTab) { keepProc.clear(); keepItem.clear(); nextOrder = null; }
+    const prevBlock = selBlock;
+    if (r.tab === 'blocks') selBlock = r.n ? BLOCKS[r.n - 1] : blockToday().b;
+    current = r.tab;
+    ['next', 'procedures', 'blocks', 'setup'].forEach(v => { $('#panel-' + v).hidden = v !== current; });
+    document.body.classList.toggle('first-run', !state.section);
+    $$('.tab[data-route]').forEach(t => {
+      if (t.dataset.route === current) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
+    });
+    renderView(current);
+    if (changedTab) window.scrollTo(0, scrollPos[current] || 0);
+    else if (r.tab === 'blocks' && prevBlock !== selBlock) {
+      const top = $('#picker').getBoundingClientRect().top + window.scrollY - 8;
+      if (window.scrollY > top) window.scrollTo(0, top);
+    }
+    if (r.tab === 'blocks') {
+      const chip = $('#picker [aria-pressed="true"]');
+      const strip = $('#picker');
+      if (chip) strip.scrollLeft = Math.max(0, chip.offsetLeft - (strip.clientWidth - chip.offsetWidth) / 2);
+    }
+    if (fromUser) {
+      if (changedTab) {
+        const h = $('#panel-' + current + ' h1');
+        if (h) h.focus({ preventScroll: true });
+      } else if (r.tab === 'blocks') {
+        const chip = $('#picker [aria-pressed="true"]');
+        if (chip) chip.focus({ preventScroll: true });
+      }
+    }
+  }
+  window.addEventListener('hashchange', () => { route(); userNav = false; });
+
+  /* ---------- events ---------- */
+  document.addEventListener('click', e => {
+    const q = e.target.closest('[data-quick]');
+    if (q) {
+      const v = Number(q.dataset.quick) === 0 ? today() : iso(new Date(parse(today()).getTime() - DAY));
+      const input = $('#box-date'); input.value = v; clearErr(input, $('#box-err'));
+      return;
+    }
+    const nav = e.target.closest('[data-route]');
+    if (nav) return go(nav.dataset.route);
+    const box = e.target.closest('.box[data-kind]');
+    if (box) {
+      const scope = (box.dataset.fk || 'x').split('|')[0];
+      return tapBox(box.dataset.kind, box.dataset.key, Number(box.dataset.i), scope);
+    }
+    const tg = e.target.closest('[data-toggle]');
+    if (tg) {
+      const id = tg.dataset.toggle;
+      if (openCards.has(id)) openCards.delete(id); else openCards.add(id);
+      tg.closest('.card').classList.toggle('open', openCards.has(id));
+      tg.setAttribute('aria-expanded', String(openCards.has(id)));
+      return;
+    }
+    const f = e.target.closest('[data-filter]');
+    if (f) {
+      filter = f.dataset.filter;
+      keepProc.clear();
+      try { localStorage.setItem(FILTER_KEY, filter); } catch (err) { /* ignore */ }
+      renderProcedures();
+      return;
+    }
+    const note = e.target.closest('[data-note]');
+    if (note) return openNote(note.dataset.note);
+    if (e.target.closest('[data-backup]')) backup().catch(() => say('The backup did not save. Try Back up again.'));
+  });
+  $('#nav-more').addEventListener('click', () => { renderStatus(); showDialog($('#dlg-more')); });
+
+  /* ---------- backup and restore ---------- */
+  let fileHandle = null;
+  let filePerm = 'none';
+  let writeTimer = null;
+
+  function idb(mode, fn) {
+    return new Promise((resolve, reject) => {
+      if (!window.indexedDB) return reject(new Error('no idb'));
+      const req = indexedDB.open('y4signoffs', 1);
+      req.onupgradeneeded = () => req.result.createObjectStore('kv');
+      req.onerror = () => reject(req.error);
+      req.onsuccess = () => {
+        const tx = req.result.transaction('kv', mode);
+        const r = fn(tx.objectStore('kv'));
+        tx.oncomplete = () => resolve(r && r.result);
+        tx.onerror = () => reject(tx.error);
+      };
+    });
+  }
+  const idbGet = k => idb('readonly', s => s.get(k));
+  const idbSet = (k, v) => idb('readwrite', s => s.put(v, k));
+
+  const exportData = () => JSON.stringify({ app: 'y4signoffs', v: 3, exportedAt: new Date().toISOString(), section: state.section, p: state.p, b: state.b }, null, 1);
+  const fileName = () => 'sign-offs-backup-' + today() + '.json';
+
+  async function writeHandle() {
+    const w = await fileHandle.createWritable();
+    await w.write(exportData());
+    await w.close();
+    state.backupAt = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
+    renderStatus();
+  }
+  function queueFileWrite() {
+    if (!fileHandle || filePerm !== 'granted') return;
+    clearTimeout(writeTimer);
+    writeTimer = setTimeout(() => writeHandle().catch(() => { filePerm = 'prompt'; renderStatus(); }), 600);
+  }
+  async function permission(request) {
+    const opts = { mode: 'readwrite' };
+    let s = await fileHandle.queryPermission(opts);
+    if (s !== 'granted' && request) s = await fileHandle.requestPermission(opts);
+    filePerm = s;
+    return s === 'granted';
+  }
+
+  async function backup() {
+    if ('showSaveFilePicker' in window) {
+      try {
+        if (fileHandle && await permission(true)) { await writeHandle(); afterBackup('Backup saved to ' + fileHandle.name + '.'); return; }
+        fileHandle = await window.showSaveFilePicker({ suggestedName: 'sign-offs-backup.json', types: [{ description: 'Sign offs backup', accept: { 'application/json': ['.json'] } }] });
+        filePerm = 'granted';
+        idbSet('handle', fileHandle).catch(() => {});
+        await writeHandle();
+        afterBackup('Backup saved. Changes now save to this file too.');
+        return;
+      } catch (e) {
+        if (e && e.name === 'AbortError') return;
+        fileHandle = null; filePerm = 'none';
+      }
+    }
+    const blob = new Blob([exportData()], { type: 'application/json' });
+    const file = typeof File === 'function' ? new File([blob], fileName(), { type: 'application/json' }) : null;
+    if (file && navigator.canShare && matchMedia('(pointer: coarse)').matches && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file] });
+        markBackedUp();
+        return;
+      } catch (e) {
+        if (e && e.name === 'AbortError') return;
+      }
+    }
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = fileName();
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    markBackedUp();
+  }
+  function afterBackup(msg) {
+    if (current === 'next') renderReminder();
+    say(msg);
+  }
+  function markBackedUp() {
+    state.backupAt = new Date().toISOString();
+    save();
+    afterBackup('Backup saved.');
+  }
+
+  let pending = null;
+  const dlgConfirm = $('#dlg-confirm');
+  $('#restore').addEventListener('click', () => $('#restore-file').click());
+  $('#restore-file').addEventListener('change', async e => {
+    const f = e.target.files && e.target.files[0];
+    e.target.value = '';
+    if (!f) return;
+    let raw;
+    try { raw = JSON.parse(await f.text()); } catch (err) { raw = null; }
+    const more = $('#dlg-more');
+    more._opener = null;
+    closeDialog(more);
+    if (!raw || raw.app !== 'y4signoffs') return say('That file is not a sign offs backup. Choose a file saved with Back up.');
+    pending = sanitize(raw);
+    const pd = Object.values(pending.p).flat().filter(Boolean).length;
+    const bd = Object.values(pending.b).reduce((a, r) => a + (r.s ? r.s.filter(Boolean).length : 0), 0);
+    const when = typeof raw.exportedAt === 'string' && !isNaN(Date.parse(raw.exportedAt)) ? ' from ' + fmtLong(iso(new Date(raw.exportedAt))) : '';
+    $('#confirm-sub').textContent = 'The backup' + when + ' has ' + plural(pd, 'procedure date', 'procedure dates') + ' and ' + plural(bd, 'block date', 'block dates') + '. It replaces everything saved on this device.';
+    showDialog(dlgConfirm);
+    dlgConfirm._opener = $('#nav-more');
+  });
+  $('#confirm-form').addEventListener('submit', e => {
+    e.preventDefault();
+    if (pending) {
+      pending.backupAt = state.backupAt;
+      if (!pending.section) pending.section = state.section;
+      state = pending; pending = null; nextOrder = null;
+      if (state.section) setSection(state.section);
+      save();
+      route();
+      say('Backup restored' + (state.section ? ', Section ' + state.section + '.' : '.'));
+    }
+    closeDialog(dlgConfirm);
+  });
+
+  function backupAge() {
+    if (!state.backupAt) return null;
+    return Math.max(0, Math.floor((Date.now() - Date.parse(state.backupAt)) / DAY));
+  }
+  function renderStatus() {
+    const el = $('#status');
+    let msg, warn = false;
+    if (!storageOK) { msg = 'This browser is not keeping your data. Use Back up before you close the page.'; warn = true; }
+    else if (fileHandle && filePerm === 'granted') msg = 'Saved on this device and to ' + fileHandle.name + '.';
+    else if (fileHandle) msg = 'Saved on this device. Back up reconnects ' + fileHandle.name + '.';
+    else msg = 'Saved on this device. Last backup ' + (state.backupAt ? fmtLong(iso(new Date(state.backupAt))) : 'never') + '.';
+    el.textContent = msg;
+    el.classList.toggle('warn', warn);
+    $('#more-section').textContent = state.section ? 'Section ' + state.section : 'Not chosen yet';
+    let standalone = false;
+    try { standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true; } catch (e) { /* ignore */ }
+    $('#install-tip').hidden = standalone;
+  }
+  function renderReminder() {
+    const box = $('#reminder');
+    const age = backupAge();
+    let msg = null;
+    if (!storageOK) msg = 'This browser is not keeping your sign offs. Back up before you close the page.';
+    else if (fileHandle && filePerm === 'granted') msg = null;
+    else if (hasData() && age === null) msg = 'No backup yet.';
+    else if (hasData() && age > 14) msg = 'Last backup ' + age + ' days ago.';
+    box.hidden = !msg;
+    if (msg) $('#reminder-text').textContent = msg;
+  }
+
+  /* ---------- boot ---------- */
+  load();
+  if (state.section) setSection(state.section);
+  if (!/^#(next|procedures|setup|blocks(-[1-7])?)$/.test(location.hash)) {
+    try { history.replaceState(null, '', '#next'); } catch (e) { /* ignore */ }
+  }
+  route();
+  renderStatus();
+
+  if ('showSaveFilePicker' in window) {
+    idbGet('handle').then(async hnd => {
+      if (!hnd) return;
+      fileHandle = hnd;
+      try { await permission(false); } catch (e) { filePerm = 'prompt'; }
+      renderStatus();
+      if (current === 'next') renderReminder();
+    }).catch(() => {});
+  }
+
+  window.addEventListener('storage', e => {
+    if (e.key !== KEY) return;
+    load();
+    if (state.section) setSection(state.section);
+    nextOrder = null;
+    route();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') { nextOrder = null; refresh(); }
+  });
+
+  if ('serviceWorker' in navigator && location.protocol === 'https:' && document.querySelector('link[rel="manifest"]')) {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+})();
+
+</script>
+</body>
+</html>
