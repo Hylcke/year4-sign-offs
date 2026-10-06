@@ -5,7 +5,7 @@
 **A pocket tracker for Year 4 MBChB mandatory procedures and block requirements.**
 Built for the University of Aberdeen Remote and Rural programme, 2026-27.
 
-[**Open the app**](https://Hylcke.github.io/year4-sign-offs/) · [Pocket booklet (PDF)](print/pocket-booklet-a5.pdf) · [A4 sheet (PDF)](print/procedure-sheet-a4.pdf)
+[**Open the app**](https://YOUR-USERNAME.github.io/year4-sign-offs/) · [Pocket booklet (PDF)](print/pocket-booklet-a5.pdf) · [A4 sheet (PDF)](print/procedure-sheet-a4.pdf)
 
 <br>
 
@@ -111,7 +111,7 @@ The weight is 1.35 for Priority and 1.0 for Required. Days since the last sign o
 
 The [pocket booklet](print/pocket-booklet-a5.pdf) is one A4 sheet that folds into an A5 booklet: a cover, Priority, Required and a notes page.
 
-Print it on A4, **landscape**, **actual size**, **double-sided**, **flip on short edge**, then fold along the small marks at the top and bottom of the centre line. If the inside prints upside down, switch to flip on long edge.
+Print it on A4, **actual size**, **double-sided** with the printer's normal setting (**flip on long edge**), then fold along the small marks at the top and bottom of the centre line. If the inside comes out upside down, switch to flip on short edge.
 
 <br>
 
