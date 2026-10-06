@@ -5,7 +5,7 @@
 **A pocket tracker for Year 4 MBChB mandatory procedures and block requirements.**
 Built for the University of Aberdeen Remote and Rural programme, 2026-27.
 
-[**Open the app**](https://YOUR-USERNAME.github.io/year4-sign-offs/) · [Pocket booklet (PDF)](print/pocket-booklet-a5.pdf) · [A4 sheet (PDF)](print/procedure-sheet-a4.pdf)
+[**Open the app**](https://Hylcke.github.io/year4-sign-offs/) · [Pocket booklet (PDF)](print/pocket-booklet-a5.pdf) · [A4 sheet (PDF)](print/procedure-sheet-a4.pdf)
 
 <br>
 
